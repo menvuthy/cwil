@@ -502,7 +502,7 @@
 }
 
 .world-map::after {
-  content: "CWIL proj Map";
+  content: "CWIL Project Map";
   position: absolute;
   left: 3rem;
   bottom: 2rem;
