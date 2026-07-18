@@ -36,18 +36,18 @@ export default function NewsArticle() {
         image={new URL(article.image, "https://cwil.vercel.app").href}
         path={`/News/${article.slug}`}
       />
-      <div className="article-page">
+      <div className="articles-page">
         {/* HERO */}
         <section
-          className="projects-hero"
+          className="articles-hero"
           style={{
             backgroundImage: `url(${article.image})`,
           }}
         >
-          <div className="projects-hero-overlay">
-            <span className="projects-hero-tag">{article.category}</span>
+          <div className="articles-hero-overlay">
+            <span className="articles-hero-tag">{article.category}</span>
 
-            <h1>{article.title}</h1>
+            <h2>{article.title}</h2>
 
             <p>
               {article.date}
