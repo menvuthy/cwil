@@ -2,7 +2,7 @@
 import "./style/HeroSlider.css";
 import homeBg from "../assets/home-bg/home-bg-71.jpg";
 import homeBg2 from "../assets/home-bg/home-bg-2.png";
-import homeBg3 from "../assets/home-bg/home-bg-6.JPG";
+import homeBg3 from "../assets/home-bg/home-bg-6.jpg";
 import homeBg4 from "../assets/home-bg/home-bg-4.JPG";
 
 const SLIDE_PAUSE_MS = 4000;

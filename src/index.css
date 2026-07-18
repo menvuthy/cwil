@@ -34,9 +34,6 @@
   --font: "Segoe UI";
   --heading-font: "DM Serif Display";
   --body-font: "Segoe UI";
-  /* --font: "Source Sans 3", "Segoe UI", system-ui, Roboto, sans-serif;
-  --heading-font: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
-  --body-font: "Segoe UI", system-ui, sans-serif; */
 
   font-family: var(--font);
 }
