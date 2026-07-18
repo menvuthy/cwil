@@ -1,4 +1,5 @@
 import { PROJECTS } from "../data/projects";
+import { NEWS } from "../data/articles";
 
 export { onBeforePrerenderStart };
 
@@ -22,5 +23,7 @@ function onBeforePrerenderStart() {
 
   const projectRoutes = PROJECTS.map((project) => `/Projects/${project.slug}`);
 
-  return [...staticRoutes, ...projectRoutes];
+  const newsRoutes = NEWS.map((article) => `/News/${article.slug}`);
+
+  return [...staticRoutes, ...projectRoutes, ...newsRoutes];
 }
