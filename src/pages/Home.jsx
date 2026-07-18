@@ -374,7 +374,7 @@ function Home() {
             </div>
           </div>
 
-          <Link to="/Cntact" className="contact-banner-btn">
+          <Link to="/Contact" className="contact-banner-btn">
             Contact Us →
           </Link>
         </div>

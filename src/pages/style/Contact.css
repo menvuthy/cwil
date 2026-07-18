@@ -51,7 +51,7 @@
   color: var(--color-page);
 }
 
-.container {
+.contact-container {
   width: min(1400px, 95%);
   margin: 0 auto;
 }

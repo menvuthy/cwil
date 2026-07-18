@@ -108,7 +108,7 @@ export default function Contact() {
 
       <div className="contact-page">
         {/* Main */}
-        <section className="contact-main container">
+        <section className="contact-main contact-container">
           {/* Left Side */}
           <div className="contact-info">
             <h2>Contact Information</h2>
@@ -138,7 +138,7 @@ export default function Contact() {
             </div>
 
             <div className="collaboration-box">
-              <h3>Collaboration Areas</h3>
+              <h3>Let's Talk</h3>
 
               <ul>
                 <li>
@@ -166,7 +166,7 @@ export default function Contact() {
 
           {/* Right Side */}
           <div className="contact-form-wrapper">
-            {/* <h2>Contact Us</h2> */}
+            <h2>Get in Touch</h2>
 
             <form
               className="contact-form"

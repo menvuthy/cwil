@@ -161,11 +161,11 @@ export default function KankaiRiver() {
                 <span className="share-label">Share this post:</span>
 
                 <FacebookShareButton url={shareUrl} quote={title}>
-                  <FacebookIcon size={36} round />
+                  <FacebookIcon size={36} square />
                 </FacebookShareButton>
 
                 <LinkedinShareButton url={shareUrl} title={title}>
-                  <LinkedinIcon size={36} round />
+                  <LinkedinIcon size={36} square />
                 </LinkedinShareButton>
               </div>
             </aside>
