@@ -1,0 +1,112 @@
+.article-section {
+  padding: 5rem 0;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 2fr 350px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.article-content {
+  max-width: 900px;
+}
+
+.article-summary {
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: #333;
+  font-weight: 500;
+  margin-bottom: 2.5rem;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--red);
+}
+
+.article-body {
+  font-size: 18px;
+  line-height: 2;
+  color: #555;
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.article-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+.article-card {
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.article-card h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.meta-item {
+  margin-bottom: 1rem;
+}
+
+.meta-item strong {
+  display: block;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.meta-item span {
+  color: #666;
+}
+
+.article-share {
+  display: flex;
+  gap: 10px;
+}
+
+.article-share a,
+.article-share button {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.article-share a:hover,
+.article-share button:hover {
+  background: var(--red);
+  color: white;
+  border-color: var(--red);
+}
+
+.article-not-found {
+  padding: 6rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .article-sidebar {
+    position: static;
+  }
+
+  .article-summary {
+    font-size: 1.1rem;
+  }
+
+  .article-body {
+    font-size: 15px;
+  }
+}

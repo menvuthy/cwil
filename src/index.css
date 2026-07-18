@@ -31,9 +31,12 @@
   --dark3: #0f0f23;
   --color-dark: #1d2430;
   --color-gray-dark: #1e232e;
-  --font: "Source Sans 3", "Segoe UI", system-ui, Roboto, sans-serif;
+  --font: "Segoe UI";
+  --heading-font: "DM Serif Display";
+  --body-font: "Segoe UI";
+  /* --font: "Source Sans 3", "Segoe UI", system-ui, Roboto, sans-serif;
   --heading-font: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
-  --body-font: "Segoe UI", system-ui, sans-serif;
+  --body-font: "Segoe UI", system-ui, sans-serif; */
 
   font-family: var(--font);
 }
@@ -358,9 +361,14 @@ footer {
   .section-header p {
     font-size: 15px;
   }
+  /* ── Buttons ── */
+  .btn-primary {
+    font-size: 12px;
+  }
+  .btn-outline {
+    font-size: 12px;
+  }
 
-  .btn-primary,
-  .btn-outline,
   .nav-cta {
     font-size: 14px;
   }

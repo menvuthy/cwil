@@ -1,34 +1,36 @@
-// data/news.js
-
-import news1 from "../../assets/news/field_0.png";
-import news2 from "../../assets/news/field_0.png";
-import news3 from "../../assets/news/field_0.png";
-
 export const NEWS = [
   {
     id: 1,
-    image: news1,
-    date: "July 2026",
-    title: "CWIL launches official website",
+    slug: "kankai-river-morphology",
+    title:
+      "Tracking 38 Years of River Morphology Changes in Nepal's Kankai River",
+    date: "July 15, 2026",
+    category: "Research",
+    image: "/images/kankai-news.jpg",
     summary:
-      "Introducing Cambodia Water Intelligence Lab and our mission to advance water solutions.",
+      "CWIL analyzed long-term river migration, erosion, and deposition dynamics using Landsat imagery from 1988–2026.",
+    featured: true,
   },
 
   {
     id: 2,
-    image: news2,
-    date: "June 2026",
-    title: "Sarawak Hydropower Study Ongoing",
+    slug: "sarawak-hydropower",
+    title: "AI-Assisted Screening of Hydropower Opportunities in Sarawak",
+    date: "July 10, 2026",
+    category: "Projects",
+    image: "/images/sarawak-news.jpg",
     summary:
-      "Technical assessment of reservoir and hydropower development options.",
+      "Combining geospatial analysis and machine learning to identify potential hydropower sites.",
   },
 
   {
     id: 3,
-    image: news3,
-    date: "May 2026",
-    title: "Flood Risk Assessment Research",
+    slug: "dynamic-world-landcover",
+    title: "Using Dynamic World for Near Real-Time Land Cover Mapping",
+    date: "June 25, 2026",
+    category: "Technology",
+    image: "/images/dynamic-world.jpg",
     summary:
-      "Exploring satellite and AI approaches for flood prediction and monitoring.",
+      "Exploring AI-generated land cover products for water resources applications.",
   },
 ];

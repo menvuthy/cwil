@@ -2,70 +2,11 @@
 import { Link } from "react-router-dom";
 import HeroSlider from "./HeroSlider";
 import { useEffect } from "react";
-import { FEATURED_PROJECTS } from "./data/projects";
-import { NEWS } from "./data/news";
+import { FEATURED_PROJECTS } from "./data/featured_projects";
+import { NEWS } from "./data/articles";
 import cwilImage from "../assets/CWIL-logo-whitebg.png";
 import sloganImage from "../assets/home-bg/slogan.png";
-import purposeImage from "../assets/home-bg/purpose.png";
-import fieldImage_1 from "../assets/home-bg/field/field_0.png";
-import fieldImage_2 from "../assets/home-bg/field/field_2.png";
-import fieldImage_3 from "../assets/home-bg/field/field_3.png";
-import fieldImage_4 from "../assets/home-bg/field/field_4.png";
-import fieldImage_5 from "../assets/home-bg/field/field_5.png";
-import fieldImage_6 from "../assets/home-bg/field/field_6.png";
-import fieldImage_7 from "../assets/home-bg/field/field_7.png";
-import fieldImage_8 from "../assets/home-bg/field/field_9.png";
-
-const RESEARCH = [
-  {
-    icon: "🌊",
-    title: "Flood Modeling & Risk Analysis",
-    image: fieldImage_1,
-    desc: "Hydrodynamic flood models, hazard maps, and early warning systems for river, urban, and coastal zones.",
-  },
-  {
-    icon: "💧",
-    image: fieldImage_2,
-    title: "Water Infrastructure & Drainage",
-    desc: "Design and assessment of drainage networks, irrigation canals, and flood protection structures.",
-  },
-  {
-    icon: "🔍",
-    image: fieldImage_3,
-    title: "Water Source Assessment",
-    desc: "Comprehensive evaluation of surface water and groundwater availability, quality, and sustainability.",
-  },
-  {
-    icon: "⚡",
-    image: fieldImage_4,
-    title: "Hydropower & River Analysis",
-    desc: "Flow duration curves, energy yield estimation, and environmental flow studies for hydropower development.",
-  },
-  {
-    icon: "🌡️",
-    image: fieldImage_5,
-    title: "Climate Change Impact Assessment",
-    desc: "CMIP6 downscaling and hydrological projections to assess future water availability and flood risk.",
-  },
-  {
-    icon: "🛰️",
-    image: fieldImage_6,
-    title: "Remote Sensing & Satellite Observation",
-    desc: "Land cover classification, flood mapping, and vegetation health monitoring using satellite and UAV data.",
-  },
-  {
-    icon: "🤖",
-    image: fieldImage_7,
-    title: "AI & Data Science for Water",
-    desc: "Machine learning streamflow prediction, anomaly detection, and data-driven early warning systems.",
-  },
-  {
-    icon: "🗺️",
-    image: fieldImage_8,
-    title: "Geospatial Analysis & Software Dev",
-    desc: "Custom GIS pipelines, interactive web mapping portals, and spatial database solutions.",
-  },
-];
+import purposeImage from "../assets/home-bg/flood_pursat.jpg";
 
 const PROJECTS = [
   {
@@ -93,6 +34,8 @@ const PROJECTS = [
     desc: "Analysis of water resources under climate change scenarios.",
   },
 ];
+
+const latestNews = NEWS.slice(0, 3);
 
 function Home() {
   useEffect(() => {
@@ -179,7 +122,7 @@ function Home() {
 
             {/* RIGHT CONTENT */}
             <div className="about-home-content reveal">
-              <h2>Cambodia Water Intelligence Lab (CWIL)</h2>
+              <h2>Cambodia Water Intelligence Lab</h2>
 
               <p>
                 CWIL is an independent research and engineering laboratory
@@ -237,39 +180,95 @@ function Home() {
       </section>
 
       {/* RESEARCH FIELDs */}
-      <section className="section">
+      <section className="research-home section">
         <div className="container">
-          <div className="section-header">
-            {/* <span className="section-tag">What We Do</span> */}
-            <h2>Research Fields</h2>
-            <p>
-              We combine advanced spatial technology with deep environmental
-              expertise to deliver actionable insights and engineering
-              solutions.
-            </p>
-          </div>
-          <div className="research-grid">
-            {RESEARCH.map((s) => (
-              <div key={s.title} className="research-card">
-                <img src={s.image} alt={s.title} />
-                <div className="research-overlay">
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          <div className="research-two-column">
+            {/* LEFT COLUMN */}
+            <div className="research-left">
+              <span className="section-kicker">Research & Development</span>
 
-          <div className="section-cta">
-            <Link to="/research" className="btn-primary">
-              View All Fields →
-            </Link>
+              <h2>Advancing Water Solutions Through Science & Innovation</h2>
+
+              <p>
+                Cambodia Water Intelligence Lab (CWIL) conducts applied research
+                and develops science-based solutions to address complex
+                challenges in water resources, flood management, hydropower
+                development, climate resilience, and environmental
+                sustainability.
+              </p>
+
+              <p>
+                By integrating hydrological science, engineering, remote
+                sensing, geospatial intelligence, artificial intelligence, and
+                data analytics, we transform data into actionable knowledge that
+                supports evidence-based decision making.
+              </p>
+
+              <Link to="/research" className="research-btn">
+                Explore Research Fields
+              </Link>
+            </div>
+
+            {/* RIGHT COLUMN */}
+            <div className="research-right">
+              <h3>Research Fields</h3>
+
+              <ul className="research-links">
+                <li>
+                  <Link to="/Research/flood-modeling">
+                    <span>01.</span> Flood Modeling & Risk Analysis
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/water-infrastructure">
+                    <span>02.</span> Water Infrastructure & Drainage
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/water-source">
+                    <span>03.</span> Water Source Assessment
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/hydropower">
+                    <span>04.</span> Hydropower & River Analysis
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/climate-change">
+                    <span>05.</span> Climate Change Impact Assessment
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/remote-sensing">
+                    <span>06.</span> Remote Sensing & Satellite Observation
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/data-science">
+                    <span>07.</span> AI & Data Science for Water
+                  </Link>
+                </li>
+
+                <li>
+                  <Link to="/Research/geospatial">
+                    <span>08.</span> Geospatial Analysis & Software Development
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* LATEST NEWS */}
-      <section className="news-section section">
+      <section className="section news-section">
         <div className="container">
           <div className="section-header">
             <h2>News & Updates</h2>
@@ -280,7 +279,7 @@ function Home() {
           </div>
 
           <div className="news-grid">
-            {NEWS.map((item) => (
+            {latestNews.map((item) => (
               <div key={item.id} className="news-card reveal">
                 <img src={item.image} alt={item.title} />
 
@@ -297,6 +296,11 @@ function Home() {
                 </div>
               </div>
             ))}
+          </div>
+          <div className="section-cta">
+            <Link to="/news" className="btn-outline">
+              View All News →
+            </Link>
           </div>
         </div>
       </section>
@@ -325,7 +329,10 @@ function Home() {
 
                   <p>{project.description}</p>
 
-                  <Link to={`/projects/${project.id}`} className="project-btn">
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="project-btn"
+                  >
                     Learn More →
                   </Link>
                 </div>
@@ -367,7 +374,7 @@ function Home() {
             </div>
           </div>
 
-          <Link to="/contact" className="contact-banner-btn">
+          <Link to="/Cntact" className="contact-banner-btn">
             Contact Us →
           </Link>
         </div>
