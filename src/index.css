@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
 *,
 *::before,
 *::after {
@@ -13,9 +15,10 @@
   --dark3: #0f0f23;
   --color-dark: black;
   --color-gray-dark: #1e232e;
-  --font: "Segoe UI";
-  --heading-font: "Segoe UI";
-  --body-font: "Segoe UI";
+
+  --font: "Inter", sans-serif;
+  --heading-font: "Inter", sans-serif;
+  --body-font: "Inter", sans-serif;
 
   font-family: var(--font);
 }
