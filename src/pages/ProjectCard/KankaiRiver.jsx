@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./style/ProjectCard.css";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import {
@@ -20,7 +20,6 @@ import Gallery3 from "../../assets/research/field/field_0.png";
 import Gallery4 from "../../assets/research/field/field_0.png";
 
 import MethodologyFigure from "../../assets/research/field/field_0.png";
-import { Helmet } from "react-helmet";
 
 const PROJECTS = {
   kankai: {
@@ -54,27 +53,15 @@ export default function KankaiRiver() {
     return () => observer.disconnect();
   }, []);
 
-  const project = PROJECTS.kankai;
+  const { pathname } = useLocation();
+  const shareUrl = `https://cwil.vercel.app${pathname}`;
 
-  const shareUrl = window.location.href;
+  const project = PROJECTS.kankai;
   const title = project.title;
   const thumbnail = project.thumbnail;
 
   return (
     <main className="projs-page">
-      <div>
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>My Home Page</title>
-          <link rel="canonical" href="https://cwil.vercel.app/" />
-          <meta
-            name="description"
-            content="This is a description of the about page"
-          />
-        </Helmet>
-        <h1>Home Page</h1>
-      </div>
-
       {/* HERO BANNER */}
       <section
         className="projs-hero"

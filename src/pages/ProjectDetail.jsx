@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { PROJECTS } from "./data/projects";
+import Seo from "./components/Seo";
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -12,5 +13,15 @@ export default function ProjectDetail() {
 
   const PageComponent = project.page;
 
-  return <PageComponent />;
+  return (
+    <>
+      <Seo
+        title={project.title}
+        description={project.desc}
+        image={new URL(project.image, "https://cwil.vercel.app").href}
+        path={`/Projects/${project.slug}`}
+      />
+      <PageComponent />
+    </>
+  );
 }
