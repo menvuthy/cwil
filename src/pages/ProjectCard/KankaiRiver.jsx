@@ -20,6 +20,7 @@ import Gallery3 from "../../assets/research/field/field_0.png";
 import Gallery4 from "../../assets/research/field/field_0.png";
 
 import MethodologyFigure from "../../assets/research/field/field_0.png";
+import { Helmet } from "react-helmet";
 
 const PROJECTS = {
   kankai: {
@@ -61,6 +62,19 @@ export default function KankaiRiver() {
 
   return (
     <main className="projs-page">
+      <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>My Home Page</title>
+          <link rel="canonical" href="https://cwil.vercel.app/" />
+          <meta
+            name="description"
+            content="This is a description of the about page"
+          />
+        </Helmet>
+        <h1>Home Page</h1>
+      </div>
+
       {/* HERO BANNER */}
       <section
         className="projs-hero"
