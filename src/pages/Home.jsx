@@ -280,7 +280,11 @@ function Home() {
 
           <div className="news-grid">
             {latestNews.map((item) => (
-              <div key={item.id} className="news-card reveal">
+              <Link
+                key={item.id}
+                to={`/News/${item.slug}`}
+                className="news-card"
+              >
                 <img src={item.image} alt={item.title} />
 
                 <div className="news-content">
@@ -290,15 +294,15 @@ function Home() {
 
                   <p>{item.summary}</p>
 
-                  <Link to="/news" className="news-link">
+                  <Link to={`/News/${item.slug}`} className="news-link">
                     Read More →
                   </Link>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="section-cta">
-            <Link to="/news" className="btn-outline">
+            <Link to="/News" className="btn-outline">
               View All News →
             </Link>
           </div>
@@ -374,7 +378,7 @@ function Home() {
             </div>
           </div>
 
-          <Link to="/Contact" className="contact-banner-btn">
+          <Link to="/Contact" className="btn-outline">
             Contact Us →
           </Link>
         </div>
