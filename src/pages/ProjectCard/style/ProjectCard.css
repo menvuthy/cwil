@@ -604,38 +604,31 @@
 
   z-index: 9999;
 
-  padding: 40px;
+  padding: 20px;
 }
 
 .lightbox-image {
-  max-width: 95%;
-  max-height: 95%;
+  width: auto;
+  height: auto;
+
+  max-width: 95vw;
+  max-height: 90vh;
 
   object-fit: contain;
-
-  border-radius: 8px;
-
-  animation: zoomIn 0.25s ease;
 }
 
 .lightbox-close {
   position: absolute;
-  top: 25px;
-  right: 30px;
+  top: 16px;
+  right: 16px;
 
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
 
   border: none;
   border-radius: 50%;
 
-  background: rgba(255, 255, 255, 0.15);
-  color: white;
-
   font-size: 28px;
-  cursor: pointer;
-
-  transition: 0.2s;
 }
 
 .lightbox-close:hover {
@@ -822,6 +815,25 @@
 
   .proj-content section {
     margin-bottom: 3rem;
+  }
+
+  .lightbox {
+    padding: 10px;
+  }
+
+  .lightbox-image {
+    max-width: 90vw;
+    max-height: 85vh;
+  }
+
+  .lightbox-close {
+    top: 10px;
+    right: 10px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 24px;
   }
 }
 

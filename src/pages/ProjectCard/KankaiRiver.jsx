@@ -32,6 +32,15 @@ const PROJECTS = {
 
 // Result1
 export default function KankaiRiver() {
+  const { pathname } = useLocation();
+  const shareUrl = `https://cwil.vercel.app${pathname}`;
+
+  const project = PROJECTS.kankai;
+  const title = project.title;
+  // const thumbnail = project.thumbnail;
+
+  const [selectedImage, setSelectedImage] = useState(null);
+
   useEffect(() => {
     const reveals = document.querySelectorAll(".reveal");
 
@@ -53,15 +62,6 @@ export default function KankaiRiver() {
     return () => observer.disconnect();
   }, []);
 
-  const { pathname } = useLocation();
-  const shareUrl = `https://cwil.vercel.app${pathname}`;
-
-  const project = PROJECTS.kankai;
-  const title = project.title;
-  const thumbnail = project.thumbnail;
-
-  const [selectedImage, setSelectedImage] = useState(null);
-
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
@@ -73,6 +73,18 @@ export default function KankaiRiver() {
 
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
+
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedImage]);
 
   return (
     <main className="projs-page">
