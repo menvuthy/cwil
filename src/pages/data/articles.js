@@ -227,9 +227,9 @@ The findings improve understanding of sediment transport pathways and support ta
 
   {
     id: 11,
-    slug: "sediment-source-analysis",
+    slug: "sediment-testing",
     category: "River Engineering",
-    image: field0,
+    image: field2,
     date: "April 15, 2026",
     readTime: "7 min read",
     title: "Sediment Source Zones Through River Morphology Analysis",
@@ -237,11 +237,11 @@ The findings improve understanding of sediment transport pathways and support ta
       "Combining river migration patterns, terrain analysis, and watershed characteristics to understand sediment pathways.",
     author: "CWIL River Engineering Team",
     content: `
-Understanding sediment sources is essential for river management and infrastructure planning.
+CWIL officially launched its new website to showcase research projects, publications, technical services, and organizational activities.
 
-CWIL combined river morphology analysis, terrain assessment, and watershed characteristics to identify major sediment-producing zones.
+The platform was designed with a focus on accessibility, scientific communication, and public engagement.
 
-The findings improve understanding of sediment transport pathways and support targeted watershed conservation efforts.
+Future updates will include interactive maps, project databases, publications, and educational resources.
 `,
   },
 
