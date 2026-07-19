@@ -5,6 +5,46 @@ import field3 from "../../assets/research/field/field_3.png";
 
 export const NEWS = [
   {
+    id: 13,
+    slug: "river-morphology-japan",
+    featured: true,
+    category: "Research",
+    image: field0,
+    date: "July 19, 2026",
+    readTime: "6 min read",
+    title: "Tracking 38 Years of River Morphology Changes in Japan River",
+    summary:
+      "CWIL completed a multi-decadal assessment of river migration, erosion, and deposition dynamics using Landsat imagery from 1988–2026.",
+    author: "CWIL River Engineering Team",
+
+    content: [
+      {
+        type: "paragraph",
+        text: "The Kankai River in eastern Nepal has undergone substantial morphological changes over the last four decades.",
+      },
+
+      {
+        type: "image",
+        src: field0,
+        caption:
+          "Figure 1. Erosion and deposition zones identified from Landsat imagery.",
+      },
+
+      {
+        type: "paragraph",
+        text: "Using annual Landsat imagery from 1988 to 2026, CWIL developed river masks through NDWI analysis.",
+      },
+
+      {
+        type: "image",
+        src: field0,
+        caption:
+          "Figure 2. Historical channel migration between 1988 and 2026.",
+      },
+    ],
+  },
+
+  {
     id: 1,
     slug: "kankai-river-morphology-nepal",
     featured: true,
