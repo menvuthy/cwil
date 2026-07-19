@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./style/ProjectCard.css";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import {
   FacebookShareButton,
   LinkedinShareButton,

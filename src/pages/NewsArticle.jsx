@@ -1,12 +1,13 @@
 import { useParams, Link, useLocation } from "react-router-dom";
 import { NEWS } from "./data/articles";
 import Seo from "./components/Seo";
+import { FaLink } from "react-icons/fa";
 import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaTelegramPlane,
-  FaLink,
-} from "react-icons/fa";
+  FacebookShareButton,
+  LinkedinShareButton,
+  FacebookIcon,
+  LinkedinIcon,
+} from "react-share";
 import "./style/NewsArticle.css";
 
 export default function NewsArticle() {
@@ -25,8 +26,6 @@ export default function NewsArticle() {
   }
 
   const shareUrl = `https://cwil.vercel.app${pathname}`;
-  const encodedShareUrl = encodeURIComponent(shareUrl);
-  const shareTitle = encodeURIComponent(article.title);
 
   return (
     <>
@@ -95,37 +94,19 @@ export default function NewsArticle() {
 
               <div className="article-card">
                 <h3>Share</h3>
+
                 <div className="article-share">
-                  <a
-                    href={`https://www.facebook.com/sharer/sharer.php?u=${encodedShareUrl}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Share on Facebook"
-                  >
-                    <FaFacebookF />
-                  </a>
+                  <FacebookShareButton url={shareUrl} quote={article.title}>
+                    <FacebookIcon size={36} square />
+                  </FacebookShareButton>
 
-                  <a
-                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedShareUrl}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Share on LinkedIn"
-                  >
-                    <FaLinkedinIn />
-                  </a>
-
-                  <a
-                    href={`https://t.me/share/url?url=${encodedShareUrl}&text=${shareTitle}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Share on Telegram"
-                  >
-                    <FaTelegramPlane />
-                  </a>
+                  <LinkedinShareButton url={shareUrl} title={article.title}>
+                    <LinkedinIcon size={36} square />
+                  </LinkedinShareButton>
 
                   <button
                     onClick={() => {
-                      navigator.clipboard.writeText(window.location.href);
+                      navigator.clipboard.writeText(shareUrl);
                       alert("Link copied!");
                     }}
                     aria-label="Copy Link"

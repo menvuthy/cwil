@@ -512,6 +512,14 @@
 }
 
 @media (max-width: 768px) {
+  .news-hero {
+    min-height: 70vh;
+  }
+
+  .news-hero-overlay {
+    min-height: 70vh;
+  }
+
   .news-hero h1 {
     font-size: var(--h1-mobile);
   }
