@@ -224,4 +224,64 @@ CWIL combined river morphology analysis, terrain assessment, and watershed chara
 The findings improve understanding of sediment transport pathways and support targeted watershed conservation efforts.
 `,
   },
+
+  {
+    id: 11,
+    slug: "sediment-source-analysis",
+    category: "River Engineering",
+    image: field0,
+    date: "April 15, 2026",
+    readTime: "7 min read",
+    title: "Sediment Source Zones Through River Morphology Analysis",
+    summary:
+      "Combining river migration patterns, terrain analysis, and watershed characteristics to understand sediment pathways.",
+    author: "CWIL River Engineering Team",
+    content: `
+Understanding sediment sources is essential for river management and infrastructure planning.
+
+CWIL combined river morphology analysis, terrain assessment, and watershed characteristics to identify major sediment-producing zones.
+
+The findings improve understanding of sediment transport pathways and support targeted watershed conservation efforts.
+`,
+  },
+
+  // {
+  //   id: 11,
+  //   slug: "river-morphology-cambodia",
+  //   featured: true,
+  //   category: "Research",
+  //   image: field1,
+  //   date: "July 16, 2026",
+  //   readTime: "6 min read",
+  //   title: "Tracking 38 Years of River Morphology Changes in Cambodia River",
+  //   summary:
+  //     "CWIL completed a multi-decadal assessment of river migration, erosion, and deposition dynamics using Landsat imagery from 1988–2026.",
+  //   author: "CWIL River Engineering Team",
+
+  //   content: [
+  //     {
+  //       type: "paragraph",
+  //       text: "The Kankai River in eastern Nepal has undergone substantial morphological changes over the last four decades.",
+  //     },
+
+  //     {
+  //       type: "image",
+  //       src: field0,
+  //       caption:
+  //         "Figure 1. Erosion and deposition zones identified from Landsat imagery.",
+  //     },
+
+  //     {
+  //       type: "paragraph",
+  //       text: "Using annual Landsat imagery from 1988 to 2026, CWIL developed river masks through NDWI analysis.",
+  //     },
+
+  //     {
+  //       type: "image",
+  //       src: field0,
+  //       caption:
+  //         "Figure 2. Historical channel migration between 1988 and 2026.",
+  //     },
+  //   ],
+  // },
 ];

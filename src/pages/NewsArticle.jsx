@@ -1,4 +1,5 @@
 import { useParams, Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import { NEWS } from "./data/articles";
 import Seo from "./components/Seo";
 import { FaLink } from "react-icons/fa";
@@ -26,6 +27,16 @@ export default function NewsArticle() {
   }
 
   const shareUrl = `https://cwil.vercel.app${pathname}`;
+
+  const [fullscreenImage, setFullscreenImage] = useState(null);
+
+  const openFullscreen = (image) => {
+    setFullscreenImage(image);
+  };
+
+  const closeFullscreen = () => {
+    setFullscreenImage(null);
+  };
 
   return (
     <>
@@ -63,8 +74,31 @@ export default function NewsArticle() {
           <div className="container article-layout">
             <article className="article-content">
               <div className="article-summary">{article.summary}</div>
+              <div className="article-body">
+                {Array.isArray(article.content)
+                  ? article.content.map((block, index) => {
+                      if (block.type === "paragraph") {
+                        return <p key={index}>{block.text}</p>;
+                      }
 
-              <div className="article-body">{article.content}</div>
+                      if (block.type === "image") {
+                        return (
+                          <figure key={index} className="article-figure">
+                            <img
+                              src={block.src}
+                              alt={block.caption || ""}
+                              onClick={() => openFullscreen(block.src)}
+                            />
+
+                            <figcaption>{block.caption}</figcaption>
+                          </figure>
+                        );
+                      }
+
+                      return null;
+                    })
+                  : article.content}
+              </div>
             </article>
 
             <aside className="article-sidebar">
@@ -119,6 +153,16 @@ export default function NewsArticle() {
           </div>
         </section>
       </div>
+
+      {fullscreenImage && (
+        <div className="fullscreen-overlay" onClick={closeFullscreen}>
+          <img
+            src={fullscreenImage}
+            alt="Full Screen"
+            className="fullscreen-image"
+          />
+        </div>
+      )}
     </>
   );
 }
