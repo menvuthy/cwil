@@ -73,7 +73,7 @@ export default function Projects() {
         style={{ backgroundImage: `url(${Hero})` }}
       >
         <div className="projects-hero-overlay">
-          <h1>Project</h1>
+          <h1>Projects</h1>
 
           <p>
             CWIL integrates scientific research, engineering expertise,

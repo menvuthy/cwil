@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./style/News.css";
 import { NEWS } from "./data/articles";
 
-import Hero from "../assets/research/hero-banner.png";
+import Hero from "../assets/news/hero-bg.jpg";
 
 export default function News() {
   const featured = NEWS[0];
