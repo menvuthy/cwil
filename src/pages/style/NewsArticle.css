@@ -202,9 +202,11 @@
 .article-card {
   padding: 2rem;
   margin-bottom: 1.5rem;
-  background: #fff;
+  background: linear-gradient(rgb(248, 251, 253) 0%, rgb(238, 246, 251) 100%);
   border: 1px solid #e5e5e5;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--red);
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
 }
 
 .article-card h3 {
@@ -237,6 +239,7 @@
   height: 45px;
   border: 1px solid #ddd;
   background: white;
+  border-radius: 999px;
   display: flex;
   align-items: center;
   justify-content: center;

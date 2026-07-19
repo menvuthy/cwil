@@ -551,7 +551,7 @@
   width: 38px;
   height: 38px;
   border: 1px solid #ddd;
-  border-radius: 6px;
+  border-radius: 999px;
   background: #fff;
   cursor: pointer;
 

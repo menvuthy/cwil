@@ -97,11 +97,11 @@ export default function NewsArticle() {
 
                 <div className="article-share">
                   <FacebookShareButton url={shareUrl} quote={article.title}>
-                    <FacebookIcon size={36} square />
+                    <FacebookIcon size={36} round />
                   </FacebookShareButton>
 
                   <LinkedinShareButton url={shareUrl} title={article.title}>
-                    <LinkedinIcon size={36} square />
+                    <LinkedinIcon size={36} round />
                   </LinkedinShareButton>
 
                   <button

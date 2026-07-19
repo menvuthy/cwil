@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./style/ProjectCard.css";
+import { FaLink } from "react-icons/fa";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -192,12 +193,21 @@ export default function KankaiRiver() {
                 <span className="share-label">Share this post:</span>
 
                 <FacebookShareButton url={shareUrl} quote={title}>
-                  <FacebookIcon size={36} square />
+                  <FacebookIcon size={36} round />
                 </FacebookShareButton>
 
                 <LinkedinShareButton url={shareUrl} title={title}>
-                  <LinkedinIcon size={36} square />
+                  <LinkedinIcon size={36} round />
                 </LinkedinShareButton>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText(shareUrl);
+                    alert("Link copied!");
+                  }}
+                  aria-label="Copy Link"
+                >
+                  <FaLink />
+                </button>
               </div>
             </aside>
 
