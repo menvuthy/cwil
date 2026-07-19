@@ -376,9 +376,10 @@
   }
 
   .contact-hero-overlay {
+    width: 100%;
     min-height: 70vh;
-    padding: 0 1.25rem;
-    padding-top: 90px;
+    padding: 0rem 1.5rem;
+    padding-top: 102px;
   }
 
   .contact-hero-tag,

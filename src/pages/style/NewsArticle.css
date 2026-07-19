@@ -325,7 +325,10 @@
   }
 
   .articles-hero-overlay {
+    width: 100%;
     min-height: 70vh;
+    padding: 0rem 1.5rem;
+    padding-top: 102px;
   }
 
   .articles-hero h2 {

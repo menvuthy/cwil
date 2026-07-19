@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./style/About.css";
 
-import aboutHero from "../assets/home-bg/home-bg-71.jpg";
+import aboutHero from "../assets/about-us/hero-bg.jpg";
 
 import menPhoto from "../assets/about-us/vuthy.jpg";
 import member2Photo from "../assets/about-us/vatey.jpg";

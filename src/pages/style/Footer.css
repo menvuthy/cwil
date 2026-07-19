@@ -38,8 +38,8 @@ footer {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: 1.5fr 3fr 1fr 1fr;
+  gap: 2rem;
   margin-bottom: 2.5rem;
 }
 
@@ -81,6 +81,18 @@ footer {
   color: rgba(255, 255, 255, 0.3);
   font-size: 15px;
 }
+.research-list {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+.research-list li {
+  break-inside: avoid;
+  margin-bottom: 0.6rem;
+}
+.footer-links-row {
+  display: block;
+}
 
 @media (max-width: 768px) {
   .footer-grid {
@@ -110,6 +122,65 @@ footer {
 
   .footer-col h4 {
     font-size: 14px;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  /* CWIL description */
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  /* Research & Development */
+  .footer-rd {
+    grid-column: 1 / -1;
+  }
+
+  /* About CWIL */
+  .footer-about {
+    grid-column: 1;
+  }
+
+  /* Follow CWIL */
+  .footer-follow {
+    grid-column: 2;
+  }
+
+  /* Research list remains 2 columns */
+  .research-list {
+    column-count: 2;
+    column-gap: 1rem;
+  }
+
+  .footer-logo-icon {
+    font-size: 18px;
+  }
+
+  .footer-logo span {
+    font-size: 16px;
+  }
+
+  .footer-brand p,
+  .footer-col ul li a {
+    font-size: 13px;
+  }
+
+  .footer-col h4 {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
   }
 
   .footer-bottom p {

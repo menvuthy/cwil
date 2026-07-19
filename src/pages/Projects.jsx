@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { PROJECTS } from "./data/projects";
 import "./style/Projects.css";
 
-import Hero from "../assets/research/hero-banner.png";
+import Hero from "../assets/project/hero-bg.jpg";
 import WorldMap from "../assets/project/asia_map.png";
 
 export default function Projects() {

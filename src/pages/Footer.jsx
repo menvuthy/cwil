@@ -18,67 +18,87 @@ export default function Footer() {
               across the globe.
             </p>
           </div>
-          <div className="footer-col">
+
+          <div className="footer-col footer-rd">
             <h4>Research & Development</h4>
-            <ul>
+            <ul className="research-list">
               <li>
-                <Link to="/services">GIS &amp; Geospatial</Link>
+                <Link to="/Research/flood-modeling">
+                  Flood Modeling &amp; Risk Analysis
+                </Link>
               </li>
               <li>
-                <Link to="/services">Hydrology</Link>
+                <Link to="/Research/water-infrastructure">
+                  Water Infrastructure &amp; Drainage
+                </Link>
               </li>
               <li>
-                <Link to="/services">Environmental</Link>
+                <Link to="/Research/water-source">Water Source Assessemnt</Link>
               </li>
               <li>
-                <Link to="/services">Remote Sensing</Link>
+                <Link to="/Research/hydropower">
+                  Hydropower &amp; River Analysis
+                </Link>
               </li>
               <li>
-                <Link to="/services">AI &amp; Data Science</Link>
+                <Link to="/Research/climate-change">
+                  Climate Change Impact Assessment
+                </Link>
+              </li>
+              <li>
+                <Link to="/Research/remote-sensing">
+                  Remote Sensing &amp; Satellite Observation
+                </Link>
+              </li>
+              <li>
+                <Link to="/Research/data-science">AI &amp; Data Science</Link>
+              </li>
+              <li>
+                <Link to="/Research/geospatial">
+                  Geospatial Analysis &amp; Software Development
+                </Link>
               </li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h4>Research Lab</h4>
+
+          {/* About CWIL */}
+          <div className="footer-col footer-about">
+            <h4>About CWIL</h4>
             <ul>
               <li>
-                <Link to="/about">About Us</Link>
+                <Link to="/About">About Us</Link>
               </li>
               <li>
-                <Link to="/research">Research Fields</Link>
+                <Link to="/Research">Research Fields</Link>
               </li>
               <li>
-                <Link to="/projects">Projects</Link>
+                <Link to="/Projects">Projects</Link>
               </li>
               <li>
-                <Link to="/news">News</Link>
+                <Link to="/News">News</Link>
               </li>
               <li>
-                <Link to="/contact">Contact</Link>
+                <Link to="/Contact">Contact</Link>
               </li>
             </ul>
           </div>
-          <div className="footer-col">
-            <h4>Connect</h4>
+
+          {/* Follow CWIL */}
+          <div className="footer-col footer-follow">
+            <h4>Follow CWIL</h4>
             <ul>
+              <li>
+                <a href="#facebook">Facebook</a>
+              </li>
               <li>
                 <a href="#linkedin">LinkedIn</a>
-              </li>
-              <li>
-                <a href="#researchgate">ResearchGate</a>
-              </li>
-              <li>
-                <a href="#twitter">Twitter / X</a>
-              </li>
-              <li>
-                <a href="#github">GitHub</a>
               </li>
             </ul>
           </div>
         </div>
         <div className="footer-bottom">
           <p>© 2027 Cambodia Water Intelligence Lab. All rights reserved.</p>
-          <p>info@cwil.co.jp</p>
+          <p>info@cwil.co.kh</p>
         </div>
       </div>
     </footer>
