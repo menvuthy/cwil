@@ -60,6 +60,20 @@ export default function KankaiRiver() {
   const title = project.title;
   const thumbnail = project.thumbnail;
 
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setSelectedImage(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
+
   return (
     <main className="projs-page">
       {/* HERO BANNER */}
@@ -101,7 +115,13 @@ export default function KankaiRiver() {
 
             {/* RIGHT IMAGE */}
             <div className="projs-overview-image">
-              <img src={researchImage} alt="Research and Development" />
+              {/* <img src={researchImage} alt="Research and Development" /> */}
+              <img
+                src={researchImage}
+                alt="Research and Development"
+                onClick={() => setSelectedImage(researchImage)}
+                className="clickable-image"
+              />
             </div>
           </div>
         </div>
@@ -229,7 +249,12 @@ export default function KankaiRiver() {
                   using cumulative river extent maps.
                 </p>
 
-                <img src={MethodologyFigure} alt="" />
+                <img
+                  src={MethodologyFigure}
+                  alt=""
+                  onClick={() => setSelectedImage(MethodologyFigure)}
+                  className="clickable-image"
+                />
 
                 <figcaption>
                   Workflow for river extent extraction and morphological change
@@ -249,7 +274,12 @@ export default function KankaiRiver() {
                   reaches of the study area.
                 </p>
 
-                <img src={MigrationMap} alt="" />
+                <img
+                  src={MigrationMap}
+                  alt=""
+                  onClick={() => setSelectedImage(MigrationMap)}
+                  className="clickable-image"
+                />
 
                 <h4>Erosion and Deposition Patterns</h4>
 
@@ -258,7 +288,12 @@ export default function KankaiRiver() {
                   deposition, indicating highly dynamic geomorphic processes.
                 </p>
 
-                <img src={ErosionDepositionChart} alt="" />
+                <img
+                  src={ErosionDepositionChart}
+                  alt=""
+                  onClick={() => setSelectedImage(ErosionDepositionChart)}
+                  className="clickable-image"
+                />
               </section>
 
               {/* GALLERY */}
@@ -266,16 +301,57 @@ export default function KankaiRiver() {
                 <h3>Project Gallery</h3>
 
                 <div className="gallery-grid">
-                  <img src={Gallery1} alt="" />
-                  <img src={Gallery2} alt="" />
-                  <img src={Gallery3} alt="" />
-                  <img src={Gallery4} alt="" />
+                  <img
+                    src={Gallery1}
+                    alt=""
+                    className="clickable-image"
+                    onClick={() => setSelectedImage(Gallery1)}
+                  />
+
+                  <img
+                    src={Gallery2}
+                    alt=""
+                    className="clickable-image"
+                    onClick={() => setSelectedImage(Gallery2)}
+                  />
+
+                  <img
+                    src={Gallery3}
+                    alt=""
+                    className="clickable-image"
+                    onClick={() => setSelectedImage(Gallery3)}
+                  />
+
+                  <img
+                    src={Gallery4}
+                    alt=""
+                    className="clickable-image"
+                    onClick={() => setSelectedImage(Gallery4)}
+                  />
                 </div>
               </section>
             </div>
           </div>
         </div>
       </section>
+
+      {selectedImage && (
+        <div className="lightbox" onClick={() => setSelectedImage(null)}>
+          <img
+            src={selectedImage}
+            alt="Fullscreen"
+            className="lightbox-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          <button
+            className="lightbox-close"
+            onClick={() => setSelectedImage(null)}
+          >
+            ✕
+          </button>
+        </div>
+      )}
     </main>
   );
 }
