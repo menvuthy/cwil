@@ -2,6 +2,7 @@ import field0 from "../../assets/research/field/field_6.png";
 import field1 from "../../assets/research/field/field_1.png";
 import field2 from "../../assets/research/field/field_2.png";
 import field3 from "../../assets/research/field/field_3.png";
+import field4 from "../../assets/project/field_2.png";
 
 export const NEWS = [
   {
@@ -139,7 +140,7 @@ The approach demonstrates how modern geospatial technologies can enhance disaste
     id: 5,
     slug: "tonle-sap-water-security",
     category: "Water Supply",
-    image: field2,
+    image: field4,
     date: "June 05, 2026",
     readTime: "4 min read",
     title: "Assessing Future Water Security for Tonle Sap Communities",
